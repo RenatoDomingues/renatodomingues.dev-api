@@ -1,7 +1,8 @@
 
 const getUser = async(username) => {
-
-    const resUser = await fetch('https://api.github.com/users/renatodomingues' + username)
+    
+    const resUser = await fetch('https://api.github.com/users/' + username)
+    //const resUser = await fetch('https://api.github.com/users/renatodomingues' + username)
     const user = await resUser.json()
 
     const resRepos = await fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
